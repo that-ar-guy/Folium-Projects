@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ee47cb2fab150bc7c6a6063c02f474cc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ee47cb2fab150bc7c6a6063c02f474cc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ee47cb2fab150bc7c6a6063c02f474cc = L.map(
+                "map_ee47cb2fab150bc7c6a6063c02f474cc",
+                {
+                    center: [40.73661, -73.98899999999999],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c8e9371c943f201f58114c3bbaf8cbbc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c8e9371c943f201f58114c3bbaf8cbbc.addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var heat_map_e0cf232d4c69aed1364cc8192f468c70 = L.heatLayer(
+                [[40.7128, -74.006], [40.7306, -73.9866], [40.758, -73.9855], [40.7488, -73.9854], [40.7295, -73.9965], [40.743, -74.0324], [40.7006, -73.9435], [40.7061, -74.0087], [40.7516, -73.9771], [40.7851, -73.9683]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_e0cf232d4c69aed1364cc8192f468c70.addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var heat_map_0eac57fb69c3e897fa3f121976578c0b = L.heatLayer(
+                [[40.7128, -74.006], [40.7295, -73.9965], [40.7006, -73.9435]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            var heat_map_705386ff03dc10c25fdbd8cfc75b85c7 = L.heatLayer(
+                [[40.7306, -73.9866], [40.7061, -74.0087]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            var heat_map_8b9151d1ca55cf258dc7be996e8cc417 = L.heatLayer(
+                [[40.758, -73.9855], [40.7851, -73.9683]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            var heat_map_9798c3db2f97aa6d46181694a46bb6d6 = L.heatLayer(
+                [[40.7488, -73.9854], [40.7516, -73.9771]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            var heat_map_dc7bab9f21ef7c126c068c59135042f5 = L.heatLayer(
+                [[40.743, -74.0324]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            var marker_c6ede227fd1d147d88780257a2d81ed9 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_03885d1d7a968b0ac9f08bcf2d6772c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b08c3e9c09ff3f8b62f949c0e3fdb28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74f7201c7a74616f476a1df96d3ba746 = $(`<div id="html_74f7201c7a74616f476a1df96d3ba746" style="width: 100.0%; height: 100.0%;">Type: Theft<br>Date: 2024-02-10<br>Description: Stolen wallet in Times Square</div>`)[0];
+                popup_8b08c3e9c09ff3f8b62f949c0e3fdb28.setContent(html_74f7201c7a74616f476a1df96d3ba746);
+            
+        
+
+        marker_c6ede227fd1d147d88780257a2d81ed9.bindPopup(popup_8b08c3e9c09ff3f8b62f949c0e3fdb28)
+        ;
+
+        
+    
+    
+                marker_c6ede227fd1d147d88780257a2d81ed9.setIcon(icon_03885d1d7a968b0ac9f08bcf2d6772c6);
+            
+    
+            var marker_a7c28f349480c27567eaa9cfd1d1fa38 = L.marker(
+                [40.7306, -73.9866],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_cb97ac70b9fec41942cefb8025520b4e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_883597649b7bc2b6cb92cb50e74a5c59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f4db16a961ebacc7984b82ef320040b = $(`<div id="html_3f4db16a961ebacc7984b82ef320040b" style="width: 100.0%; height: 100.0%;">Type: Assault<br>Date: 2024-02-11<br>Description: Fight reported near NYU</div>`)[0];
+                popup_883597649b7bc2b6cb92cb50e74a5c59.setContent(html_3f4db16a961ebacc7984b82ef320040b);
+            
+        
+
+        marker_a7c28f349480c27567eaa9cfd1d1fa38.bindPopup(popup_883597649b7bc2b6cb92cb50e74a5c59)
+        ;
+
+        
+    
+    
+                marker_a7c28f349480c27567eaa9cfd1d1fa38.setIcon(icon_cb97ac70b9fec41942cefb8025520b4e);
+            
+    
+            var marker_358398473ec6992f2dae4a8d5e0595d6 = L.marker(
+                [40.758, -73.9855],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_56a9cad79b265e0828c7c9aee51c47de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33f21ae3ed510ba72a335c7ce91e6255 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f68c0e4836f732f3319ac6ab5bf0e7b = $(`<div id="html_1f68c0e4836f732f3319ac6ab5bf0e7b" style="width: 100.0%; height: 100.0%;">Type: Robbery<br>Date: 2024-02-12<br>Description: ATM robbery in Midtown</div>`)[0];
+                popup_33f21ae3ed510ba72a335c7ce91e6255.setContent(html_1f68c0e4836f732f3319ac6ab5bf0e7b);
+            
+        
+
+        marker_358398473ec6992f2dae4a8d5e0595d6.bindPopup(popup_33f21ae3ed510ba72a335c7ce91e6255)
+        ;
+
+        
+    
+    
+                marker_358398473ec6992f2dae4a8d5e0595d6.setIcon(icon_56a9cad79b265e0828c7c9aee51c47de);
+            
+    
+            var marker_eef91092f92a3a6d031fa357693a1083 = L.marker(
+                [40.7488, -73.9854],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_3dd3152656324b3e943c8dc480a3aff8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b15749c3c0e0ccfe4f9dec9ff355c5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71a782959a2f6fa34c47c0994d7c1580 = $(`<div id="html_71a782959a2f6fa34c47c0994d7c1580" style="width: 100.0%; height: 100.0%;">Type: Burglary<br>Date: 2024-02-13<br>Description: Apartment break-in reported</div>`)[0];
+                popup_9b15749c3c0e0ccfe4f9dec9ff355c5b.setContent(html_71a782959a2f6fa34c47c0994d7c1580);
+            
+        
+
+        marker_eef91092f92a3a6d031fa357693a1083.bindPopup(popup_9b15749c3c0e0ccfe4f9dec9ff355c5b)
+        ;
+
+        
+    
+    
+                marker_eef91092f92a3a6d031fa357693a1083.setIcon(icon_3dd3152656324b3e943c8dc480a3aff8);
+            
+    
+            var marker_21a07bcdcbafcf7b5819c1f069895f96 = L.marker(
+                [40.7295, -73.9965],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_9c88d9e569ec2d2ab68ab50f70747455 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de666d87d979e33c2c1216680e9ac902 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45fba9265f7c0ec1d2ba4d28656af0ab = $(`<div id="html_45fba9265f7c0ec1d2ba4d28656af0ab" style="width: 100.0%; height: 100.0%;">Type: Theft<br>Date: 2024-02-14<br>Description: Bike stolen from Washington Square Park</div>`)[0];
+                popup_de666d87d979e33c2c1216680e9ac902.setContent(html_45fba9265f7c0ec1d2ba4d28656af0ab);
+            
+        
+
+        marker_21a07bcdcbafcf7b5819c1f069895f96.bindPopup(popup_de666d87d979e33c2c1216680e9ac902)
+        ;
+
+        
+    
+    
+                marker_21a07bcdcbafcf7b5819c1f069895f96.setIcon(icon_9c88d9e569ec2d2ab68ab50f70747455);
+            
+    
+            var marker_7a4762e271a9fa968c6be001db802bdf = L.marker(
+                [40.743, -74.0324],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_269b3a499c812e58ceb6fab7d4af23a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8417c5ba6ed0e2b324a10c07845c0a9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2d0faf28a8a7b3ad711484b33d813d3 = $(`<div id="html_f2d0faf28a8a7b3ad711484b33d813d3" style="width: 100.0%; height: 100.0%;">Type: Vandalism<br>Date: 2024-02-15<br>Description: Graffiti found on store walls</div>`)[0];
+                popup_8417c5ba6ed0e2b324a10c07845c0a9b.setContent(html_f2d0faf28a8a7b3ad711484b33d813d3);
+            
+        
+
+        marker_7a4762e271a9fa968c6be001db802bdf.bindPopup(popup_8417c5ba6ed0e2b324a10c07845c0a9b)
+        ;
+
+        
+    
+    
+                marker_7a4762e271a9fa968c6be001db802bdf.setIcon(icon_269b3a499c812e58ceb6fab7d4af23a9);
+            
+    
+            var marker_b2eea009a7412e666b4721096701d97c = L.marker(
+                [40.7006, -73.9435],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_21eda49be329d09710d4f41545735192 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d146d593cea753f5ab5e89efbf1261b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aee140b0d2c53f6483e237f76509d543 = $(`<div id="html_aee140b0d2c53f6483e237f76509d543" style="width: 100.0%; height: 100.0%;">Type: Theft<br>Date: 2024-02-16<br>Description: Phone snatched on subway platform</div>`)[0];
+                popup_0d146d593cea753f5ab5e89efbf1261b.setContent(html_aee140b0d2c53f6483e237f76509d543);
+            
+        
+
+        marker_b2eea009a7412e666b4721096701d97c.bindPopup(popup_0d146d593cea753f5ab5e89efbf1261b)
+        ;
+
+        
+    
+    
+                marker_b2eea009a7412e666b4721096701d97c.setIcon(icon_21eda49be329d09710d4f41545735192);
+            
+    
+            var marker_9287c0bf907353f6814328efd077d324 = L.marker(
+                [40.7061, -74.0087],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_a71511a841ab33dfbaaed44b12fe6041 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71bca06869b4846b6b5488ecefc3542d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a508fb9f8bc4c466f7a2027570401933 = $(`<div id="html_a508fb9f8bc4c466f7a2027570401933" style="width: 100.0%; height: 100.0%;">Type: Assault<br>Date: 2024-02-17<br>Description: Verbal altercation turned physical</div>`)[0];
+                popup_71bca06869b4846b6b5488ecefc3542d.setContent(html_a508fb9f8bc4c466f7a2027570401933);
+            
+        
+
+        marker_9287c0bf907353f6814328efd077d324.bindPopup(popup_71bca06869b4846b6b5488ecefc3542d)
+        ;
+
+        
+    
+    
+                marker_9287c0bf907353f6814328efd077d324.setIcon(icon_a71511a841ab33dfbaaed44b12fe6041);
+            
+    
+            var marker_b72893d6825028e867dee41559e82661 = L.marker(
+                [40.7516, -73.9771],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_ca05c28f9a5774e04fd98a7d62aa650f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3237f40967468f4c8cb939b16437c84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12bedd1feeaf58fe86d5b6c58a1b3d79 = $(`<div id="html_12bedd1feeaf58fe86d5b6c58a1b3d79" style="width: 100.0%; height: 100.0%;">Type: Burglary<br>Date: 2024-02-18<br>Description: Office break-in reported</div>`)[0];
+                popup_e3237f40967468f4c8cb939b16437c84.setContent(html_12bedd1feeaf58fe86d5b6c58a1b3d79);
+            
+        
+
+        marker_b72893d6825028e867dee41559e82661.bindPopup(popup_e3237f40967468f4c8cb939b16437c84)
+        ;
+
+        
+    
+    
+                marker_b72893d6825028e867dee41559e82661.setIcon(icon_ca05c28f9a5774e04fd98a7d62aa650f);
+            
+    
+            var marker_81cc9412b279c01c1ca0cadb1cfb92a0 = L.marker(
+                [40.7851, -73.9683],
+                {
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+        
+    
+            var icon_a8109eeb4d960d64394836403c2880e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc538ecca4b76388f50f8993e4ab8243 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e47487ef54cc33d8d2c1229cd762c5b = $(`<div id="html_3e47487ef54cc33d8d2c1229cd762c5b" style="width: 100.0%; height: 100.0%;">Type: Robbery<br>Date: 2024-02-19<br>Description: Park visitor mugged at night</div>`)[0];
+                popup_dc538ecca4b76388f50f8993e4ab8243.setContent(html_3e47487ef54cc33d8d2c1229cd762c5b);
+            
+        
+
+        marker_81cc9412b279c01c1ca0cadb1cfb92a0.bindPopup(popup_dc538ecca4b76388f50f8993e4ab8243)
+        ;
+
+        
+    
+    
+                marker_81cc9412b279c01c1ca0cadb1cfb92a0.setIcon(icon_a8109eeb4d960d64394836403c2880e8);
+            
+    
+            var layer_control_7f2fe12c9305a44fc2e1013b465e6731_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_c8e9371c943f201f58114c3bbaf8cbbc,
+                },
+                overlays :  {
+                    "All Crimes" : heat_map_e0cf232d4c69aed1364cc8192f468c70,
+                    "Theft" : heat_map_0eac57fb69c3e897fa3f121976578c0b,
+                    "Assault" : heat_map_705386ff03dc10c25fdbd8cfc75b85c7,
+                    "Robbery" : heat_map_8b9151d1ca55cf258dc7be996e8cc417,
+                    "Burglary" : heat_map_9798c3db2f97aa6d46181694a46bb6d6,
+                    "Vandalism" : heat_map_dc7bab9f21ef7c126c068c59135042f5,
+                },
+            };
+            let layer_control_7f2fe12c9305a44fc2e1013b465e6731 = L.control.layers(
+                layer_control_7f2fe12c9305a44fc2e1013b465e6731_layers.base_layers,
+                layer_control_7f2fe12c9305a44fc2e1013b465e6731_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_ee47cb2fab150bc7c6a6063c02f474cc);
+
+        
+</script>
+</html>

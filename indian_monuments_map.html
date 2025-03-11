@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b34bb43cde3816edcecef8fc36ac05d6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b34bb43cde3816edcecef8fc36ac05d6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b34bb43cde3816edcecef8fc36ac05d6 = L.map(
+                "map_b34bb43cde3816edcecef8fc36ac05d6",
+                {
+                    center: [20.5937, 78.9629],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_849e7b14c20b8e6b5834851b9454d8af = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_849e7b14c20b8e6b5834851b9454d8af.addTo(map_b34bb43cde3816edcecef8fc36ac05d6);
+        
+    
+            var marker_e626163ca0211cd14c9de05e54fefb29 = L.marker(
+                [27.1751, 78.0421],
+                {
+}
+            ).addTo(map_b34bb43cde3816edcecef8fc36ac05d6);
+        
+    
+            var icon_c010db3d2e42e5ddd90f4767f21aeee3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba01d59c8170948ba67da333b78fb358 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_178a38a089c2a055470193dbac6c9ee0 = $(`<div id="html_178a38a089c2a055470193dbac6c9ee0" style="width: 100.0%; height: 100.0%;">Taj Mahal</div>`)[0];
+                popup_ba01d59c8170948ba67da333b78fb358.setContent(html_178a38a089c2a055470193dbac6c9ee0);
+            
+        
+
+        marker_e626163ca0211cd14c9de05e54fefb29.bindPopup(popup_ba01d59c8170948ba67da333b78fb358)
+        ;
+
+        
+    
+    
+                marker_e626163ca0211cd14c9de05e54fefb29.setIcon(icon_c010db3d2e42e5ddd90f4767f21aeee3);
+            
+    
+            var marker_88521a26a22af56dcf66a010223ded54 = L.marker(
+                [28.5244, 77.1855],
+                {
+}
+            ).addTo(map_b34bb43cde3816edcecef8fc36ac05d6);
+        
+    
+            var icon_0aa07939fc752c9f8d4fcd8a2788ced5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9c548f0f514efffd27c2ea7d00ce7de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce51a4ba1231474f71816d923df3ee32 = $(`<div id="html_ce51a4ba1231474f71816d923df3ee32" style="width: 100.0%; height: 100.0%;">Qutub Minar</div>`)[0];
+                popup_f9c548f0f514efffd27c2ea7d00ce7de.setContent(html_ce51a4ba1231474f71816d923df3ee32);
+            
+        
+
+        marker_88521a26a22af56dcf66a010223ded54.bindPopup(popup_f9c548f0f514efffd27c2ea7d00ce7de)
+        ;
+
+        
+    
+    
+                marker_88521a26a22af56dcf66a010223ded54.setIcon(icon_0aa07939fc752c9f8d4fcd8a2788ced5);
+            
+    
+            var marker_d04d38ff01e959db9ec9b359ee0d83ba = L.marker(
+                [28.6129, 77.2295],
+                {
+}
+            ).addTo(map_b34bb43cde3816edcecef8fc36ac05d6);
+        
+    
+            var icon_2b961e64073d9e23b4b141f50fc65cd4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca6996a37e5de3e0913aab1746e5afde = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4133b9ee228dfe08e7967126856b6507 = $(`<div id="html_4133b9ee228dfe08e7967126856b6507" style="width: 100.0%; height: 100.0%;">India Gate</div>`)[0];
+                popup_ca6996a37e5de3e0913aab1746e5afde.setContent(html_4133b9ee228dfe08e7967126856b6507);
+            
+        
+
+        marker_d04d38ff01e959db9ec9b359ee0d83ba.bindPopup(popup_ca6996a37e5de3e0913aab1746e5afde)
+        ;
+
+        
+    
+    
+                marker_d04d38ff01e959db9ec9b359ee0d83ba.setIcon(icon_2b961e64073d9e23b4b141f50fc65cd4);
+            
+    
+            var marker_e37e5c4a241915a633d1a88b51a3cb4f = L.marker(
+                [18.922, 72.8347],
+                {
+}
+            ).addTo(map_b34bb43cde3816edcecef8fc36ac05d6);
+        
+    
+            var icon_620628c2fa7b8e3a942e962dc6ed1152 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dfd88c6e7791b791b032408a59149072 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ae59c8385217e25f3a6d6860f18e9d7 = $(`<div id="html_1ae59c8385217e25f3a6d6860f18e9d7" style="width: 100.0%; height: 100.0%;">Gateway of India</div>`)[0];
+                popup_dfd88c6e7791b791b032408a59149072.setContent(html_1ae59c8385217e25f3a6d6860f18e9d7);
+            
+        
+
+        marker_e37e5c4a241915a633d1a88b51a3cb4f.bindPopup(popup_dfd88c6e7791b791b032408a59149072)
+        ;
+
+        
+    
+    
+                marker_e37e5c4a241915a633d1a88b51a3cb4f.setIcon(icon_620628c2fa7b8e3a942e962dc6ed1152);
+            
+    
+            var marker_072e1994e59008319c2eacfff40be86c = L.marker(
+                [17.3616, 78.4747],
+                {
+}
+            ).addTo(map_b34bb43cde3816edcecef8fc36ac05d6);
+        
+    
+            var icon_aeeb8ea05587536533036dc62f0f9f7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a227390071439ba4db689b76f02f4fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c766b7b7797e965a355ae638b3d30c5b = $(`<div id="html_c766b7b7797e965a355ae638b3d30c5b" style="width: 100.0%; height: 100.0%;">Charminar</div>`)[0];
+                popup_7a227390071439ba4db689b76f02f4fc.setContent(html_c766b7b7797e965a355ae638b3d30c5b);
+            
+        
+
+        marker_072e1994e59008319c2eacfff40be86c.bindPopup(popup_7a227390071439ba4db689b76f02f4fc)
+        ;
+
+        
+    
+    
+                marker_072e1994e59008319c2eacfff40be86c.setIcon(icon_aeeb8ea05587536533036dc62f0f9f7d);
+            
+</script>
+</html>
